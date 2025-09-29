@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>SJF Scheduling</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  <script src="sjf.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <h2>NextInLine</h2>
+  </nav>
+
+  <div class="container">
+    <h1>Simulasi Shortest Job First (SJF)</h1>
+
+    <!-- Input manual -->
+    <div class="card">
+      <h2>Tambah Proses Manual</h2>
+      <input type="text" id="pname" placeholder="Nama Proses (misal: P1)">
+      <input type="number" id="burst" placeholder="Burst Time">
+      <input type="number" id="arrival" placeholder="Arrival Time">
+      <button onclick="addProcess()">Tambah</button>
+      <button onclick="resetProcesses()">Reset</button>
+    </div>
+
+    <!-- Upload Excel -->
+    <div class="card">
+      <h2>Upload Data dari Excel</h2>
+      <input type="file" id="uploadExcel" accept=".xlsx,.xls,.csv" onchange="handleExcel(event)">
+    </div>
+
+    <!-- Tabel Proses -->
+    <div class="card">
+      <h2>Daftar Proses</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Burst</th>
+            <th>Arrival</th>
+          </tr>
+        </thead>
+        <tbody id="processTableBody"></tbody>
+      </table>
+    </div>
+
+    <!-- Tombol Jalankan -->
+    <button class="btn-run" onclick="runSJF()">Hitung SJF</button>
+
+    <!-- Hasil -->
+    <div class="result" id="result"></div>
+
+    <!-- Grafik -->
+    <div class="card">
+      <h2>Gantt Chart</h2>
+      <canvas id="ganttChart"></canvas>
+    </div>
+    <div class="card">
+      <h2>Waiting & Turnaround Time</h2>
+      <canvas id="waitingChart"></canvas>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 |SJF Scheduler | Tim 6 </p>
+  </footer>
+</body>
+</html>
