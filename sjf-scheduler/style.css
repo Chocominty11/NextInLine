@@ -1,0 +1,135 @@
+/* Global */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff); /* gradasi cerah biru-cyan */
+  margin: 0;
+  padding: 0;
+  color: #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, #f6d365, #fda085); /* gradasi cerah orange-pink */
+  color: #fff;
+  padding: 25px 40px; /* lebih lebar dan tebal */
+  text-align: center;
+  font-size: 24px; /* lebih besar */
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border-radius: 0 0 15px 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #333;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Card - Glassmorphism with colorful variations */
+.card {
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  color: #000;
+}
+
+/* Example colorful card variants */
+.card-blue { background: rgba(135,206,250,0.4); } /* light sky blue */
+.card-green { background: rgba(144,238,144,0.4); } /* light green */
+.card-pink { background: rgba(255,182,193,0.4); } /* light pink */
+
+/* Input */
+input {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: rgba(255,255,255,0.5);
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 0 8px #ff9a9e;
+}
+
+/* Button */
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #a1c4fd, #c2e9fb);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.btn-run { display: block; margin: 20px auto; font-size: 16px; }
+.btn-reset {
+  background: linear-gradient(45deg, #fbc2eb, #a6c1ee);
+}
+.btn-reset:hover {
+  background: linear-gradient(45deg, #ffdde1, #ee9ca7);
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+th, td { padding: 12px; text-align: center; }
+
+th {
+  background: linear-gradient(45deg, #fbc2eb, #a6c1ee);
+  color: #fff;
+}
+
+tr:nth-child(even) { background: rgba(255,255,255,0.3); }
+tr:nth-child(odd) { background: rgba(255,255,255,0.15); }
+
+td { color: #000; }
+
+/* Footer */
+footer {
+  margin-top: auto;
+  background: linear-gradient(90deg, #f6d365, #fda085); /* sama dengan header */
+  color: #fff;
+  text-align: center;
+  padding: 20px 40px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  box-sizing: border-box;
+}
